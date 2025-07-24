@@ -1,60 +1,68 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:recommended",
-		"docker:pinDigests",
-		"group:jsUnitTest",
-		"group:vite",
-		"helpers:pinGitHubActionDigestsToSemver",
-		":approveMajorUpdates",
-		":configMigration",
-		":enableVulnerabilityAlerts",
-		":pinAllExceptPeerDependencies"
-	],
-	"customManagers": [
-		{
-			"customType": "regex",
-			"managerFilePatterns": ["/(^|/)prettier.config.js$/"],
-			"depNameTemplate": "typescript",
-			"datasourceTemplate": "npm",
-			"matchStrings": [
-				"\\/\\/ renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+importOrderTypeScriptVersion\\s*\\:\\s*[\"']?(?<currentValue>.+?)[\"']"
-			]
-		}
-	],
-	"packageRules": [
-		{
-			"extends": ["packages:eslint"],
-			"groupName": "eslint packages"
-		},
-		{
-			"groupName": "prettier packages",
-			"matchPackageNames": ["prettier**", "@ianvs/prettier-plugin-sort-imports"]
-		},
-		{
-			"extends": ["packages:react"],
-			"groupName": "react packages"
-		},
-		{
-			"extends": ["packages:stylelint"],
-			"groupName": "stylelint packages"
-		},
-		{
-			"groupName": "playwright monorepo",
-			"matchPackageNames": ["playwright", "@playwright/test", "mcr.microsoft.com/playwright"]
-		},
-		{
-			"groupName": "storybook monorepo",
-			"matchPackageNames": ["@storybook/**", "eslint-plugin-storybook", "storybook"]
-		},
-		{
-			"groupName": "bun monorepo",
-			"matchPackageNames": ["bun", "@types/bun", "bun-types", "oven/bun"]
-		}
-	],
-	"patch": {
-		"rebaseWhen": "behind-base-branch"
-	},
-	"rebaseWhen": "conflicted",
-	"osvVulnerabilityAlerts": true
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "docker:pinDigests",
+    "group:jsUnitTest",
+    "group:vite",
+    "helpers:pinGitHubActionDigestsToSemver",
+    ":approveMajorUpdates",
+    ":configMigration",
+    ":enableVulnerabilityAlerts",
+    ":pinAllExceptPeerDependencies"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/(^|/)prettier.config.js$/"],
+      "depNameTemplate": "typescript",
+      "datasourceTemplate": "npm",
+      "matchStrings": [
+        "\\/\\/ renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+importOrderTypeScriptVersion\\s*\\:\\s*[\"']?(?<currentValue>.+?)[\"']"
+      ]
+    }
+  ],
+  "packageRules": [
+    {
+      "extends": ["packages:eslint"],
+      "groupName": "eslint packages"
+    },
+    {
+      "groupName": "prettier packages",
+      "matchPackageNames": ["prettier**", "@ianvs/prettier-plugin-sort-imports"]
+    },
+    {
+      "extends": ["packages:react"],
+      "groupName": "react packages"
+    },
+    {
+      "extends": ["packages:stylelint"],
+      "groupName": "stylelint packages"
+    },
+    {
+      "groupName": "playwright monorepo",
+      "matchPackageNames": [
+        "playwright",
+        "@playwright/test",
+        "mcr.microsoft.com/playwright"
+      ]
+    },
+    {
+      "groupName": "storybook monorepo",
+      "matchPackageNames": [
+        "@storybook/**",
+        "eslint-plugin-storybook",
+        "storybook"
+      ]
+    },
+    {
+      "groupName": "bun monorepo",
+      "matchPackageNames": ["bun", "@types/bun", "bun-types", "oven/bun"]
+    }
+  ],
+  "patch": {
+    "rebaseWhen": "behind-base-branch"
+  },
+  "rebaseWhen": "conflicted",
+  "osvVulnerabilityAlerts": true
 }

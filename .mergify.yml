@@ -5,6 +5,7 @@ pull_request_rules:
       - author=dsm23
       - check-success=dependency-review
       - check-success=gitleaks
+      - check-success=pr-title
       - check-success=zizmor
     actions:
       review:
@@ -15,6 +16,7 @@ pull_request_rules:
       - author=renovate[bot]
       - check-success=dependency-review
       - check-success=gitleaks
+      - check-success=pr-title
       - check-success=zizmor
     actions:
       review:
@@ -25,6 +27,7 @@ pull_request_rules:
     conditions:
       - check-success=dependency-review
       - check-success=gitleaks
+      - check-success=pr-title
       - check-success=zizmor
       - "#approved-reviews-by>=1"
     actions:

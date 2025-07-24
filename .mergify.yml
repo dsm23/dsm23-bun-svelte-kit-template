@@ -8,6 +8,7 @@ pull_request_rules:
       - check-success=codeql (javascript)
       - check-success=codeql (typescript)
       - check-success=dependency-review
+      - check-success=format
       - check-success=gitleaks
       - check-success=pr-title
       - check-success=zizmor
@@ -23,6 +24,7 @@ pull_request_rules:
       - check-success=codeql (javascript)
       - check-success=codeql (typescript)
       - check-success=dependency-review
+      - check-success=format
       - check-success=gitleaks
       - check-success=pr-title
       - check-success=zizmor
@@ -38,10 +40,11 @@ pull_request_rules:
       - check-success=codeql (javascript)
       - check-success=codeql (typescript)
       - check-success=dependency-review
+      - check-success=format
       - check-success=gitleaks
       - check-success=pr-title
       - check-success=zizmor
-      - "#approved-reviews-by>=1"
+      - '#approved-reviews-by>=1'
     actions:
       merge:
         method: merge

@@ -1,0 +1,44 @@
+name: Zizmor
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+jobs:
+  zizmor:
+    runs-on: ubuntu-24.04
+    permissions:
+      security-events: write
+      # required for workflows in private repositories
+      actions: read
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@7edac99f961f18b581bbd960d59d049f04c0002f # v6.4.1
+
+      - name: Run zizmor
+        run: uvx zizmor --format sarif . > results.sarif
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@d6bbdef45e766d081b84a2def353b0055f728d3e # v3.29.3
+        with:
+          sarif_file: results.sarif
+          category: zizmor

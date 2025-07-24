@@ -6,11 +6,11 @@ inputs:
   bun-run-install:
     description: Whether to run bun install
     required: false
-    default: "true"
+    default: 'true'
   bun-restore-cache:
     description: Whether to restore cache
     required: false
-    default: "true"
+    default: 'true'
   bun-install-cache-key:
     description: The cache key for the bun install cache
     required: false
@@ -35,7 +35,7 @@ runs:
     - name: Set up Bun
       uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2.0.2
       with:
-        bun-version-file: ".bun-version"
+        bun-version-file: '.bun-version'
 
     - name: Run bun install
       if: ${{ inputs.bun-run-install == 'true' }}

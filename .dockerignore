@@ -1,0 +1,10 @@
+*
+!public/
+!src/
+!static/
+!bun.lock
+!index.html
+!package.json
+!svelte.config.js
+!tsconfig.*
+!vite.config.ts

@@ -13,8 +13,8 @@
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint .",
-    "test:unit": "vitest",
-    "test": "npm run test:unit -- --run && npm run test:e2e",
+    "test:unit": "vitest --project=client --project=server",
+    "test": "vitest",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

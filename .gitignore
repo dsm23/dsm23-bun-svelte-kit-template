@@ -19,9 +19,13 @@ Thumbs.db
 !.env.example
 !.env.test
 
+# Lefthook
+lefthook-local.yml
+
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Storybook
 *storybook.log
 storybook-static

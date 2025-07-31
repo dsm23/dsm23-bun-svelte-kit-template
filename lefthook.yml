@@ -4,6 +4,10 @@ pre-commit:
     prettier:
       run: ./node_modules/.bin/prettier --check --ignore-unknown {staged_files}
 
+    stylelint:
+      run: ./node_modules/.bin/stylelint --allow-empty-input {staged_files}
+      glob: "*.css"
+
     eslint:
       run: ./node_modules/.bin/eslint {staged_files}
       glob:

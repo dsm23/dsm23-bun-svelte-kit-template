@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: "dsm23/dsm23-bun-svelte-kit-template"
+  IMAGE_NAME: ${{ github.repository  }}
 
 permissions:
   contents: read

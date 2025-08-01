@@ -65,7 +65,7 @@
     "svelte-check": "4.3.0",
     "tailwindcss": "4.1.11",
     "typed-query-selector": "2.12.0",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "typescript-eslint": "8.38.0",
     "vite": "7.0.6",
     "vitest": "3.2.4",

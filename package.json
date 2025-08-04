@@ -66,7 +66,7 @@
     "tailwindcss": "4.1.11",
     "typed-query-selector": "2.12.0",
     "typescript": "5.9.2",
-    "typescript-eslint": "8.38.0",
+    "typescript-eslint": "8.39.0",
     "vite": "7.0.6",
     "vitest": "3.2.4",
     "vitest-browser-svelte": "1.0.0"

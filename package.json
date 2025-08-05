@@ -22,6 +22,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
     "@chromatic-com/storybook": "4.1.0",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",

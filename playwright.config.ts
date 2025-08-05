@@ -91,12 +91,12 @@ export default defineConfig({
 
   webServer: [
     {
-      command: `pnpm run build && pnpm run preview --port ${portProd}`,
+      command: `bun run build && bun run preview --port ${portProd}`,
       url: `http://localhost:${portProd}`,
       reuseExistingServer: !process.env.CI,
     },
     {
-      command: `pnpm run dev --port ${portDev}`,
+      command: `bun run dev --port ${portDev}`,
       url: `http://localhost:${portDev}`,
       reuseExistingServer: !process.env.CI,
     },

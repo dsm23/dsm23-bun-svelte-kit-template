@@ -27,14 +27,15 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-RUN adduser --system --uid 1001 sveltekit
+RUN addgroup --system --gid 1001 bunjs \
+  && adduser --system --uid 1001 sveltekit
 
 COPY --from=builder /app/static ./static
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=builder --chown=sveltekit:bun /app/.svelte-kit ./.svelte-kit
-COPY --from=builder --chown=sveltekit:bun /app/build ./build
+COPY --from=builder --chown=sveltekit:bunjs /app/.svelte-kit ./.svelte-kit
+COPY --from=builder --chown=sveltekit:bunjs /app/build ./build
 
 USER sveltekit
 

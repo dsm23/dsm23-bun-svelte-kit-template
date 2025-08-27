@@ -61,7 +61,7 @@
     "stylelint-config-standard": "39.0.0",
     "stylelint-order": "7.0.0",
     "stylelint-selector-bem-pattern": "4.0.1",
-    "svelte": "5.38.5",
+    "svelte": "5.38.6",
     "svelte-check": "4.3.1",
     "tailwindcss": "4.1.12",
     "typed-query-selector": "2.12.0",

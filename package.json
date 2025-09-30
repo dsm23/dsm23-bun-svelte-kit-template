@@ -43,7 +43,7 @@
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "24.6.0",
     "@vitest/browser": "3.2.4",
-    "dotenv": "17.2.2",
+    "dotenv": "17.2.3",
     "eslint": "9.36.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-storybook": "9.1.8",

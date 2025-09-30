@@ -29,7 +29,7 @@ const config = {
     ".css$",
   ],
   // renovate: datasource=npm depName=typescript
-  importOrderTypeScriptVersion: "5.9.2",
+  importOrderTypeScriptVersion: "5.9.3",
   overrides: [
     {
       files: "*.svelte",

@@ -47,7 +47,7 @@
         "svelte-check": "4.3.2",
         "tailwindcss": "4.1.13",
         "typed-query-selector": "2.12.0",
-        "typescript": "5.9.2",
+        "typescript": "5.9.3",
         "typescript-eslint": "8.45.0",
         "vite": "7.1.7",
         "vitest": "3.2.4",
@@ -1074,7 +1074,7 @@
 
     "typed-query-selector": ["typed-query-selector@2.12.0", "", {}, "sha512-SbklCd1F0EiZOyPiW192rrHZzZ5sBijB6xM+cpmrwDqObvdtunOHHIk9fCGsoK5JVIYXoyEp4iEdE3upFH3PAg=="],
 
-    "typescript": ["typescript@5.9.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A=="],
+    "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
 
     "typescript-eslint": ["typescript-eslint@8.45.0", "", { "dependencies": { "@typescript-eslint/eslint-plugin": "8.45.0", "@typescript-eslint/parser": "8.45.0", "@typescript-eslint/typescript-estree": "8.45.0", "@typescript-eslint/utils": "8.45.0" }, "peerDependencies": { "eslint": "^8.57.0 || ^9.0.0", "typescript": ">=4.8.4 <6.0.0" } }, "sha512-qzDmZw/Z5beNLUrXfd0HIW6MzIaAV5WNDxmMs9/3ojGOpYavofgNAAD/nC6tGV2PczIi0iw8vot2eAe/sBn7zg=="],
 
@@ -1151,6 +1151,8 @@
     "@storybook/svelte-vite/@storybook/svelte": ["@storybook/svelte@9.1.9", "", { "dependencies": { "ts-dedent": "^2.0.0", "type-fest": "~2.19" }, "peerDependencies": { "storybook": "^9.1.9", "svelte": "^5.0.0" } }, "sha512-bTLjLAnuXKS02A3QtwzkCKaxfu0y+Ie0jImpZTZr7awnhjoLOW7Bezsz/xVpNBbIB2lUziYmY9fx4n8xJlknpA=="],
 
     "@storybook/svelte-vite/magic-string": ["magic-string@0.30.18", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.5" } }, "sha512-yi8swmWbO17qHhwIBNeeZxTceJMeBvWJaId6dyvTSOwTipqeHhMhOrz6513r1sOKnpvQ7zkhlG8tPrpilwTxHQ=="],
+
+    "@storybook/svelte-vite/typescript": ["typescript@5.9.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A=="],
 
     "@storybook/sveltekit/@storybook/svelte": ["@storybook/svelte@9.1.9", "", { "dependencies": { "ts-dedent": "^2.0.0", "type-fest": "~2.19" }, "peerDependencies": { "storybook": "^9.1.9", "svelte": "^5.0.0" } }, "sha512-bTLjLAnuXKS02A3QtwzkCKaxfu0y+Ie0jImpZTZr7awnhjoLOW7Bezsz/xVpNBbIB2lUziYmY9fx4n8xJlknpA=="],
 

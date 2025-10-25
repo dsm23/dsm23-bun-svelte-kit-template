@@ -1,10 +1,8 @@
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import storybookTest from "@storybook/addon-vitest/vitest-plugin";
+import { playwright } from "@vitest/browser-playwright";
 import { defineConfig, mergeConfig } from "vitest/config";
 import viteConfig from "./vite.config";
-
-const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default mergeConfig(
   viteConfig,
@@ -15,10 +13,9 @@ export default mergeConfig(
           extends: "./vite.config.ts",
           test: {
             name: "client",
-            environment: "browser",
             browser: {
               enabled: true,
-              provider: "playwright",
+              provider: playwright(),
               instances: [{ browser: "chromium" }],
             },
             include: ["src/**/*.svelte.{test,spec}.{js,ts}"],
@@ -40,14 +37,16 @@ export default mergeConfig(
           plugins: [
             // The plugin will run tests for the stories defined in your Storybook config
             // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-            storybookTest({ configDir: path.join(dirname, ".storybook") }),
+            storybookTest({
+              configDir: path.join(import.meta.dirname, ".storybook"),
+            }),
           ],
           test: {
             name: "storybook",
             browser: {
               enabled: true,
               headless: true,
-              provider: "playwright",
+              provider: playwright(),
               instances: [{ browser: "chromium" }],
             },
             setupFiles: [".storybook/vitest.setup.ts"],

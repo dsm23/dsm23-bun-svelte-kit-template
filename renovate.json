@@ -61,7 +61,9 @@
     }
   ],
   "bun": {
-    "minimumReleaseAge": "3 days"
+    "minimumReleaseAge": "3 days",
+    "internalChecksFilter": "strict",
+    "prCreation": "not-pending"
   },
   "patch": {
     "rebaseWhen": "behind-base-branch"

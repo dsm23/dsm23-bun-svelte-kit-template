@@ -36,6 +36,6 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Smoke & Acceptance tests
-        run: bun run test --project storybook
+        run: bun run test run --project storybook
         env:
           FORCE_COLOR: "1"

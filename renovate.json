@@ -60,11 +60,6 @@
       "matchPackageNames": ["bun", "@types/bun", "bun-types", "oven/bun"]
     }
   ],
-  "bun": {
-    "minimumReleaseAge": "3 days",
-    "internalChecksFilter": "strict",
-    "prCreation": "not-pending"
-  },
   "patch": {
     "rebaseWhen": "behind-base-branch"
   },

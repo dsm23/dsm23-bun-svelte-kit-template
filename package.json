@@ -42,7 +42,7 @@
     "@tailwindcss/vite": "4.1.17",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "24.10.1",
-    "@vitest/browser-playwright": "4.0.14",
+    "@vitest/browser-playwright": "4.0.15",
     "dotenv": "17.2.3",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
@@ -68,7 +68,7 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.48.1",
     "vite": "7.2.6",
-    "vitest": "4.0.14",
+    "vitest": "4.0.15",
     "vitest-browser-svelte": "2.0.1"
   }
 }

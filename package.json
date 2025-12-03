@@ -52,7 +52,7 @@
     "lefthook": "2.0.5",
     "npm-run-all2": "8.0.4",
     "playwright": "1.57.0",
-    "prettier": "3.7.3",
+    "prettier": "3.7.4",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-svelte": "3.4.0",
     "prettier-plugin-tailwindcss": "0.7.2",

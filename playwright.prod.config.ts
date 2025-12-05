@@ -1,9 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 import dotenv from "dotenv";
+import config from "./playwright.config";
 
-const PORT = process.env.PORT ?? "5173";
+const PORT = process.env.PORT ?? "4173";
 
 const injectFromEnvFile = () => {
   const envDir = ".";
@@ -28,33 +29,15 @@ injectFromEnvFile();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./e2e",
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI ? "blob" : "html",
+  ...config,
   use: {
+    ...config.use,
     baseURL: `http://localhost:${PORT}`,
-    trace: "on-first-retry",
   },
-  projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-    },
-  ],
+  /* Run your local build server before starting the tests */
   webServer: [
     {
-      command: `bun run dev --port ${PORT}`,
+      command: `bun run build && bun run preview --port ${PORT}`,
       url: `http://localhost:${PORT}`,
       reuseExistingServer: !process.env.CI,
     },

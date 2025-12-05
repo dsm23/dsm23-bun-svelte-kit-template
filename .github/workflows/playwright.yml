@@ -23,8 +23,28 @@ jobs:
       fail-fast: false
       matrix:
         shardIndex:
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-        shardTotal: [18]
+          - [1, 1]
+          - [2, 2]
+          - [3, 3]
+          - [4, 4]
+          - [5, 5]
+          - [6, 6]
+          - [7, 7]
+          - [8, 8]
+          - [9, 9]
+          - [1, 10]
+          - [2, 11]
+          - [3, 12]
+          - [4, 13]
+          - [5, 14]
+          - [6, 15]
+          - [7, 16]
+          - [8, 17]
+          - [9, 18]
+        shardTotal: [9]
+    name: >
+      test-shard (${{ matrix.shardIndex[1] <= matrix.shardTotal && 'dev' || 'prod' }}) -
+      (${{ matrix.shardIndex[0] }}, ${{ matrix.shardTotal }})
     container:
       image: gwennlbh/playwright-bun:v1.57.0@sha256:bd628a5d7022b5889e7f5ef074608cef058ab721d96fa66883b9ea7ad34a5e8d
       options: --user 1001
@@ -42,14 +62,23 @@ jobs:
       - name: Bun setup
         uses: ./.github/actions/setup
 
-      - name: Run Playwright tests
-        run: bun playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+      - name: Run Playwright tests (dev)
+        if: ${{ matrix.shardIndex[1] <= matrix.shardTotal }}
+        run: >
+          bunx playwright test
+          --shard=${{ matrix.shardIndex[0] }}/${{ matrix.shardTotal }}
+      - name: Run Playwright tests (prod)
+        if: ${{ matrix.shardIndex[1] > matrix.shardTotal }}
+        run: >
+          bunx playwright test
+          --config playwright.prod.config.ts
+          --shard=${{ matrix.shardIndex[0] }}/${{ matrix.shardTotal }}
 
       - name: Upload playwright report to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
-          name: blob-report-${{ matrix.shardIndex }}
+          name: blob-report-${{ matrix.shardIndex[1] }}
           path: blob-report
           retention-days: 1
 

@@ -34,7 +34,7 @@ export default defineConfig({
     ...config.use,
     baseURL: `http://localhost:${PORT}`,
   },
-  /* Run your local build server before starting the tests */
+  tag: "@prod",
   webServer: [
     {
       command: `bun run build && bun run preview --port ${PORT}`,

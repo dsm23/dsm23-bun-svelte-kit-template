@@ -21,6 +21,8 @@
       ]
     }
   ],
+  "internalChecksFilter": "strict",
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
       "extends": ["packages:eslint"],

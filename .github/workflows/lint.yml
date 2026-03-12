@@ -34,3 +34,6 @@ jobs:
 
       - name: Lint check
         run: bun run lint
+
+      - name: Lint Unused Dependencies
+        run: bunx knip

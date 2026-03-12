@@ -1,1 +1,18 @@
-/// <reference types="@vitest/browser/matchers" />
+import "@testing-library/jest-dom/vitest";
+
+import { vi } from "vitest";
+
+// required for svelte5 + jsdom as jsdom does not support matchMedia
+vi.stubGlobal(
+  "matchMedia",
+  vi.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  })),
+);
+
+// add more mocks here if you need them

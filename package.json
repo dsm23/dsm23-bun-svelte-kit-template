@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.1",
-    "@chromatic-com/storybook": "5.0.1",
+    "@chromatic-com/storybook": "5.0.2",
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
     "@commitlint/types": "20.5.0",

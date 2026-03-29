@@ -6,7 +6,7 @@
       "name": "dsm23-bun-svelte-kit-template",
       "devDependencies": {
         "@axe-core/playwright": "4.11.1",
-        "@chromatic-com/storybook": "5.0.2",
+        "@chromatic-com/storybook": "5.1.1",
         "@commitlint/cli": "20.5.0",
         "@commitlint/config-conventional": "20.5.0",
         "@commitlint/types": "20.5.0",
@@ -88,7 +88,7 @@
 
     "@cacheable/utils": ["@cacheable/utils@2.4.0", "", { "dependencies": { "hashery": "^1.5.0", "keyv": "^5.6.0" } }, "sha512-PeMMsqjVq+bF0WBsxFBxr/WozBJiZKY0rUojuaCoIaKnEl3Ju1wfEwS+SV1DU/cSe8fqHIPiYJFif8T3MVt4cQ=="],
 
-    "@chromatic-com/storybook": ["@chromatic-com/storybook@5.0.2", "", { "dependencies": { "@neoconfetti/react": "^1.0.0", "chromatic": "^13.3.4", "filesize": "^10.0.12", "jsonfile": "^6.1.0", "strip-ansi": "^7.1.0" }, "peerDependencies": { "storybook": "^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0" } }, "sha512-uLd5gyvcz8q83GI0rYWjml45ryO3ZJwZLretLEZvWFJ3UlFk5C5Km9cwRcKZgZp0F3zYwbb8nEe6PJdgA1eKxg=="],
+    "@chromatic-com/storybook": ["@chromatic-com/storybook@5.1.1", "", { "dependencies": { "@neoconfetti/react": "^1.0.0", "chromatic": "^13.3.4", "filesize": "^10.0.12", "jsonfile": "^6.1.0", "strip-ansi": "^7.1.0" }, "peerDependencies": { "storybook": "^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0" } }, "sha512-BPoAXHM71XgeCK2u0jKr9i8apeQMm/Z9IWGyndA2FMijfQG9m8ox45DdWh/pxFkK5ClhGgirv5QwMhFIeHmThg=="],
 
     "@commitlint/cli": ["@commitlint/cli@20.5.0", "", { "dependencies": { "@commitlint/format": "^20.5.0", "@commitlint/lint": "^20.5.0", "@commitlint/load": "^20.5.0", "@commitlint/read": "^20.5.0", "@commitlint/types": "^20.5.0", "tinyexec": "^1.0.0", "yargs": "^17.0.0" }, "bin": { "commitlint": "./cli.js" } }, "sha512-yNkyN/tuKTJS3wdVfsZ2tXDM4G4Gi7z+jW54Cki8N8tZqwKBltbIvUUrSbT4hz1bhW/h0CdR+5sCSpXD+wMKaQ=="],
 

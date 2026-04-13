@@ -4,11 +4,8 @@ build
 # Public Folder
 public
 
-# Jest
+# Vitest
 coverage
 
 # Storybook
 storybook-static
-
-# Old Styles
-styles/old

@@ -61,7 +61,6 @@
     "stylelint": "17.6.0",
     "stylelint-config-standard": "40.0.0",
     "stylelint-order": "8.1.1",
-    "stylelint-selector-bem-pattern": "4.0.1",
     "svelte": "5.55.2",
     "svelte-check": "4.4.6",
     "tailwindcss": "4.2.2",

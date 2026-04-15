@@ -48,7 +48,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-storybook": "10.3.5",
     "eslint-plugin-svelte": "3.17.0",
-    "globals": "17.4.0",
+    "globals": "17.5.0",
     "knip": "6.4.0",
     "lefthook": "2.1.5",
     "npm-run-all2": "8.0.4",

@@ -45,7 +45,7 @@ jobs:
       test-shard (${{ matrix.shardIndex[1] <= matrix.shardTotal && 'dev' || 'prod' }}) -
       (${{ matrix.shardIndex[0] }}, ${{ matrix.shardTotal }})
     container:
-      image: gwennlbh/playwright-bun:v1.59.1@sha256:515fbb3663df19552a743463a4a0d927f0389ce569abd2b0623c7732d789555a
+      image: gwennlbh/playwright-bun:v1.59.1@sha256:2ea6caacfa3465e6c6ed641cb0ceea0b5d0b467d16398f52caf278e07e0809c3
       options: --user 1001
     steps:
       - name: Harden Runner

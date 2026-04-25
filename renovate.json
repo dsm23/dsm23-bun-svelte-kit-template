@@ -21,6 +21,17 @@
       ]
     }
   ],
+  "registryAliases": {
+    "dhi.io": "dhi.io"
+  },
+  "hostRules": [
+    {
+      "matchHost": "dhi.io",
+      "hostType": "docker",
+      "username": "{{ secrets.MEND_DOCKER_HUB_USERNAME }}",
+      "password": "{{ secrets.MEND_DOCKER_HUB_PASSWORD }}"
+    }
+  ],
   "packageRules": [
     {
       "description": "Apply minimum release age to all relevant datasources with timestamps",

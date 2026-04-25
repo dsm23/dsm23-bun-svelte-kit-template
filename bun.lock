@@ -30,7 +30,7 @@
         "eslint": "10.2.1",
         "eslint-config-prettier": "10.1.8",
         "eslint-plugin-storybook": "10.3.5",
-        "eslint-plugin-svelte": "3.17.0",
+        "eslint-plugin-svelte": "3.17.1",
         "globals": "17.5.0",
         "knip": "6.6.0",
         "lefthook": "2.1.6",
@@ -719,7 +719,7 @@
 
     "eslint-plugin-storybook": ["eslint-plugin-storybook@10.3.5", "", { "dependencies": { "@typescript-eslint/utils": "^8.48.0" }, "peerDependencies": { "eslint": ">=8", "storybook": "^10.3.5" } }, "sha512-rEFkfU3ypF44GpB4tiJ9EFDItueoGvGi3+weLHZax2ON2MB7VIDsxdSUGvIU5tMURg+oWYlpzCyLm4TpDq2deA=="],
 
-    "eslint-plugin-svelte": ["eslint-plugin-svelte@3.17.0", "", { "dependencies": { "@eslint-community/eslint-utils": "^4.6.1", "@jridgewell/sourcemap-codec": "^1.5.0", "esutils": "^2.0.3", "globals": "^16.0.0", "known-css-properties": "^0.37.0", "postcss": "^8.4.49", "postcss-load-config": "^3.1.4", "postcss-safe-parser": "^7.0.0", "semver": "^7.6.3", "svelte-eslint-parser": "^1.4.0" }, "peerDependencies": { "eslint": "^8.57.1 || ^9.0.0 || ^10.0.0", "svelte": "^3.37.0 || ^4.0.0 || ^5.0.0" }, "optionalPeers": ["svelte"] }, "sha512-sF6wgd5FLS2P8CCaOy2HdYYYEcZ6TwL251dLHUkNmtLnWECk1Dwc+j6VeulmmnFxr7Xs0WNtjweOA+bJ0PnaFw=="],
+    "eslint-plugin-svelte": ["eslint-plugin-svelte@3.17.1", "", { "dependencies": { "@eslint-community/eslint-utils": "^4.6.1", "@jridgewell/sourcemap-codec": "^1.5.0", "esutils": "^2.0.3", "globals": "^16.0.0", "known-css-properties": "^0.37.0", "postcss": "^8.4.49", "postcss-load-config": "^3.1.4", "postcss-safe-parser": "^7.0.0", "semver": "^7.6.3", "svelte-eslint-parser": "^1.4.0" }, "peerDependencies": { "eslint": "^8.57.1 || ^9.0.0 || ^10.0.0", "svelte": "^3.37.0 || ^4.0.0 || ^5.0.0" }, "optionalPeers": ["svelte"] }, "sha512-NyiXHtS3Ni7e532RBwS9OXlMKDIrENg3gY+/+ODjZzQx2xhU3NlJ+nIl1a93iUUQeiJL3lS8KLmY+W8hklzweQ=="],
 
     "eslint-scope": ["eslint-scope@9.1.2", "", { "dependencies": { "@types/esrecurse": "^4.3.1", "@types/estree": "^1.0.8", "esrecurse": "^4.3.0", "estraverse": "^5.2.0" } }, "sha512-xS90H51cKw0jltxmvmHy2Iai1LIqrfbw57b79w/J7MfvDfkIkFZ+kj6zC3BjtUwh150HsSSdxXZcsuv72miDFQ=="],
 

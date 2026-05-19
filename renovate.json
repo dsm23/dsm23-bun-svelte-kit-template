@@ -2,9 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
-    "group:jsUnitTest",
-    "group:vite",
+    "group:all",
     "helpers:pinGitHubActionDigestsToSemver",
+    "schedule:daily",
     "security:openssf-scorecard",
     ":approveMajorUpdates",
     ":enableVulnerabilityAlerts",

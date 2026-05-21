@@ -52,46 +52,15 @@
       "minimumReleaseAgeBehaviour": "timestamp-optional"
     },
     {
-      "extends": ["packages:eslint"],
-      "groupName": "eslint packages"
-    },
-    {
-      "groupName": "prettier packages",
-      "matchPackageNames": ["prettier**", "@ianvs/prettier-plugin-sort-imports"]
-    },
-    {
-      "extends": ["packages:react"],
-      "groupName": "react packages"
-    },
-    {
-      "extends": ["packages:stylelint"],
-      "groupName": "stylelint packages"
-    },
-    {
       "groupName": "playwright monorepo",
+      "matchUpdateTypes": ["major", "minor"],
       "matchPackageNames": [
         "playwright",
         "@playwright/test",
-        "mcr.microsoft.com/playwright",
-        "gwennlbh/playwright-bun"
+        "mcr.microsoft.com/playwright"
       ]
-    },
-    {
-      "groupName": "storybook monorepo",
-      "matchPackageNames": [
-        "@storybook/**",
-        "eslint-plugin-storybook",
-        "storybook"
-      ]
-    },
-    {
-      "groupName": "bun monorepo",
-      "matchPackageNames": ["bun", "@types/bun", "bun-types", "oven/bun"]
     }
   ],
-  "patch": {
-    "rebaseWhen": "behind-base-branch"
-  },
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true
 }

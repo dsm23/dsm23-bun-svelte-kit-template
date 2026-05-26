@@ -18,7 +18,7 @@ jobs:
   smoke-test:
     runs-on: ubuntu-24.04
     container:
-      image: gwennlbh/playwright-bun:v1.60.0@sha256:b886646cfb205730816a159dab870b003830b6fd90ddbe7bfb70006988caa3e9
+      image: gwennlbh/playwright-bun:v1.60.0@sha256:da01034f9dfdc3e3d809d047ee003478beef9bd9d594e7f75ed1ed4224a4c408
       options: --user 1001
     steps:
       - name: Harden Runner

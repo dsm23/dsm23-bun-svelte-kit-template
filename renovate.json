@@ -73,7 +73,8 @@
         "playwright",
         "@playwright/test",
         "mcr.microsoft.com/playwright"
-      ]
+      ],
+      "schedule": ["* 3-6 * * *"]
     }
   ],
   "rebaseWhen": "conflicted",

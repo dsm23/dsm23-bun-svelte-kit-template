@@ -18,16 +18,16 @@ jobs:
   smoke-test:
     runs-on: ubuntu-latest
     container:
-      image: gwennlbh/playwright-bun:v1.60.0@sha256:da01034f9dfdc3e3d809d047ee003478beef9bd9d594e7f75ed1ed4224a4c408
+      image: gwennlbh/playwright-bun:v1.63.0@sha256:3672a4b315f6994598c40360a6b1e5a84252f280ff183656aae5a549227fffbe
       options: --user 1001
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
         with:
           egress-policy: audit
 
       - name: Git Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 

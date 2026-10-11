@@ -45,16 +45,16 @@ jobs:
       test-shard (${{ matrix.shardIndex[1] <= matrix.shardTotal && 'dev' || 'prod' }}) -
       (${{ matrix.shardIndex[0] }}, ${{ matrix.shardTotal }})
     container:
-      image: gwennlbh/playwright-bun:v1.60.0@sha256:da01034f9dfdc3e3d809d047ee003478beef9bd9d594e7f75ed1ed4224a4c408
+      image: gwennlbh/playwright-bun:v1.63.0@sha256:3672a4b315f6994598c40360a6b1e5a84252f280ff183656aae5a549227fffbe
       options: --user 1001
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25 # v2.22.1
         with:
           egress-policy: audit
 
       - name: Git Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 
@@ -75,7 +75,7 @@ jobs:
 
       - name: Upload playwright report to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: blob-report-${{ matrix.shardIndex[1] }}
           path: blob-report
@@ -90,12 +90,12 @@ jobs:
         run: exit 1
 
       - name: Harden Runner
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25 # v2.22.1
         with:
           egress-policy: audit
 
       - name: Git Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 
@@ -103,7 +103,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Download blob reports from GitHub Actions Artifacts
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           path: all-blob-reports
           pattern: blob-report-*
@@ -113,7 +113,7 @@ jobs:
         run: bun playwright merge-reports --reporter html ./all-blob-reports
 
       - name: Upload HTML report
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: html-report--attempt-${{ github.run_attempt }}
           path: playwright-report

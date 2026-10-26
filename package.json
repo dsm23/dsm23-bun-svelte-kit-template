@@ -33,7 +33,7 @@
     "@storybook/addon-a11y": "10.4.6",
     "@storybook/addon-docs": "10.4.6",
     "@storybook/addon-svelte-csf": "5.1.2",
-    "@storybook/addon-vitest": "10.4.6",
+    "@storybook/addon-vitest": "10.6.2",
     "@storybook/sveltekit": "10.4.6",
     "@sveltejs/adapter-node": "5.5.7",
     "@sveltejs/kit": "2.69.1",
